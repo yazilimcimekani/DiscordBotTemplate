@@ -17,6 +17,10 @@
   "devDependencies": {
     "nodemon": "^2.0.22",
     "prettier": "2.8.3"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.11.0",
+    "dotenv-safe": "^8.2.0"
   }
 }
-
