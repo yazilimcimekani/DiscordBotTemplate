@@ -1,0 +1,22 @@
+{
+  "name": "djs-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "@echo Starting Development Server && nodemon",
+    "prod": "@echo Starting Production Server && npm start",
+    "format:check": "prettier --check .",
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "keywords": [],
+  "author": "Yazılımcı Mekanı Dev Team",
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "prettier": "2.8.3"
+  }
+}
+

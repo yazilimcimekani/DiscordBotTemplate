@@ -1,0 +1,27 @@
+## directories to ignore
+node_modules
+build
+docs
+
+## file extensions to ignore
+*.png
+*.jpg
+*.svg
+*.gif
+*.ico
+*.txt
+*.env
+*.md
+
+## files to ignore
+package.json
+yarn.lock
+.prettierrc
+.gitignore
+.gitmodules
+.env.example
+Dockerfile
+docker-compose.yml
+docker-compose.dev.yml
+docker-compose.prod.yml
+docker-compose.test.yml

@@ -1,0 +1,17 @@
+{
+  "restartable": "rs",
+  "ignore": [
+    "*.test.js",
+    "**/examples/**",
+    ".git",
+    "npm-debug.log",
+    "node_modules/**/node_modules",
+    ".env",
+    "assets/",
+    "**/example.js"
+  ],
+  "verbose": true,
+  "env": {
+    "NODE_ENV": "development"
+  }
+}
