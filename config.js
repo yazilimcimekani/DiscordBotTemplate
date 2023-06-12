@@ -6,7 +6,8 @@ require('dotenv-safe').config({
 const configuration = {
   BOT: {
     token: process.env.token,
-    slashCommandType: process.env.SLASH_COMMANDS_TYPE
+    slashCommandType: process.env.SLASH_COMMANDS_TYPE,
+    id: process.env.ID
   }
 }
 
