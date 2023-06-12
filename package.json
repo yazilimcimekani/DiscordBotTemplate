@@ -1,7 +1,7 @@
 {
   "name": "djs-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "DiscordJS Template",
   "main": "index.js",
   "scripts": {
     "start": "node .",
