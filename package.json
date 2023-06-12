@@ -1,7 +1,7 @@
 {
   "name": "djs-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "DiscordJS Template",
   "main": "index.js",
   "scripts": {
     "start": "node .",
@@ -15,6 +15,7 @@
   "keywords": [],
   "author": "Yazılımcı Mekanı Dev Team",
   "devDependencies": {
+    "eslint": "^8.42.0",
     "nodemon": "^2.0.22",
     "prettier": "2.8.3"
   },
