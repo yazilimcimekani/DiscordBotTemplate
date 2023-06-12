@@ -15,6 +15,7 @@
   "keywords": [],
   "author": "Yazılımcı Mekanı Dev Team",
   "devDependencies": {
+    "eslint": "^8.42.0",
     "nodemon": "^2.0.22",
     "prettier": "2.8.3"
   },
