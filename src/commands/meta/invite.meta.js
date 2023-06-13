@@ -1,19 +1,19 @@
 const { SlashCommandBuilder } = require('discord.js')
 
 const metadata = {
-  name: 'davet',
+  name: 'invite',
   cooldown: 0,
-  description: 'Botun davet linkini gönderir.',
+  description: 'Sends the bot invite link.',
   active: true,
   slash: new SlashCommandBuilder().addStringOption((input) =>
     input
-      .setName('izin')
-      .setDescription('İzinleri seçersiniz')
+      .setName('permissions')
+      .setDescription('Choose the permissions')
       .setRequired(true)
       .addChoices(
-        { name: 'Önerilen', value: '2088234230' },
-        { name: 'Yönetici', value: '8' },
-        { name: 'Yetkisiz', value: '0' }
+        { name: 'Recommended', value: '2088234230' },
+        { name: 'Administrator', value: '8' },
+        { name: 'Without permissions', value: '0' }
       )
   )
 }
