@@ -12,7 +12,7 @@ module.exports = {
         locale: interaction.locale,
         guildLocale: interaction.guildLocale
       }
-      
+
       const command = client.commands.get(cmd.name)
       if (!command) return
 
