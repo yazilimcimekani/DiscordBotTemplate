@@ -1,5 +1,5 @@
 const { REST, Routes } = require('discord.js')
-const { BOT } = require('../../config.js')
+const { BOT } = require('../config.js')
 const { readdirSync } = require('fs')
 
 class InteractionHandler {
@@ -12,14 +12,15 @@ class InteractionHandler {
       readdirSync('./src/events')
         .filter((file) => file.endsWith('.js'))
         .forEach(async (file) => {
-          const event = await require(`../events/${file}`)
+          const event = await require(`./events/${file}`)
 
           if (!event) return
           this.client.on(event.eventName, event.execute)
-          console.log(`[EVENT] ${event.name} adlı event başarıyla yüklendi!`)
+          console.log(`[EVENT] ${event.name} event loaded successfully!`)
         })
     } catch (e) {
-      console.log(`[EVENT] Eventler yüklenirken bir hata ortaya çıktı:\n` + e)
+      console.log('[EVENT] An error occurred while loading events!')
+      throw new Error(e)
     }
   }
 
@@ -30,7 +31,6 @@ class InteractionHandler {
   handleSelectMenus() {}
 
   handleSlashCommands() {
-    const commands = new Set()
     const slashCommands = []
     const rest = new REST({ version: '10' }).setToken(BOT.token)
 
@@ -40,15 +40,15 @@ class InteractionHandler {
         readdirSync(`./src/commands/${dir}`)
           .filter((file) => file.endsWith('.js'))
           .forEach(async (file) => {
-            const cmd = await require(`../commands/${dir}/${file}`)
-            commands.add(cmd.metadata.name, cmd.run)
+            const cmd = await require(`./commands/${dir}/${file}`)
+            this.client.commands.set(cmd.metadata.name, cmd)
             cmd.metadata.slash.setName(cmd.metadata.name).setDescription(cmd.metadata.description)
             slashCommands.push(cmd.metadata.slash.toJSON())
             if (cmd.metadata.contextMenu) {
               await cmd.metadata.contextMenu.setName(cmd.metadata.name)
               slashCommands.push(cmd.metadata.contextMenu.toJSON())
             }
-            console.log(`[/CMDS] ${cmd.metadata.name} adlı komut yüklendi.`)
+            console.log(`[/CMDS] ${cmd.metadata.name} command loaded!`)
           })
       })
 
@@ -58,14 +58,14 @@ class InteractionHandler {
           .put(Routes.applicationCommands(BOT.id, BOT.slashCommandType), {
             body: slashCommands
           })
-          .then(() => console.log('[/CMDS] Slash komutları global bir şekilde başarıyla yüklendi.'))
+          .then(() => console.log('[/CMDS] All slash commands loaded globally!'))
       } else {
         rest
           .put(Routes.applicationGuildCommands(BOT.id, BOT.slashCommandType), {
             body: slashCommands
           })
           .then(() =>
-            console.log('[/CMDS] Slash komutları sadece bir sunucuya başarıyla yüklendi.')
+            console.log('[/CMDS] All slash commands loaded in the guild!')
           )
       }
     }, 1000)
