@@ -16,10 +16,11 @@ class InteractionHandler {
 
           if (!event) return
           this.client.on(event.eventName, event.execute)
-          console.log(`[EVENT] ${event.name} adlı event başarıyla yüklendi!`)
+          console.log(`[EVENT] ${event.name} event loaded successfully!`)
         })
     } catch (e) {
-      console.log(`[EVENT] Eventler yüklenirken bir hata ortaya çıktı:\n` + e)
+      console.log('[EVENT] An error occurred while loading events!')
+      throw new Error(e)
     }
   }
 
@@ -47,7 +48,7 @@ class InteractionHandler {
               await cmd.metadata.contextMenu.setName(cmd.metadata.name)
               slashCommands.push(cmd.metadata.contextMenu.toJSON())
             }
-            console.log(`[/CMDS] ${cmd.metadata.name} adlı komut yüklendi.`)
+            console.log(`[/CMDS] ${cmd.metadata.name} command loaded!`)
           })
       })
 
@@ -57,14 +58,14 @@ class InteractionHandler {
           .put(Routes.applicationCommands(BOT.id, BOT.slashCommandType), {
             body: slashCommands
           })
-          .then(() => console.log('[/CMDS] Slash komutları global bir şekilde başarıyla yüklendi.'))
+          .then(() => console.log('[/CMDS] All slash commands loaded globally!'))
       } else {
         rest
           .put(Routes.applicationGuildCommands(BOT.id, BOT.slashCommandType), {
             body: slashCommands
           })
           .then(() =>
-            console.log('[/CMDS] Slash komutları sadece bir sunucuya başarıyla yüklendi.')
+            console.log('[/CMDS] All slash commands loaded in the guild!')
           )
       }
     }, 1000)

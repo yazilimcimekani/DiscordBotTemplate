@@ -15,5 +15,8 @@ global.client = client
 
 client
   .login(config.BOT.token)
-  .then(() => console.log('[BOT] Bota giriş yapıldı!'))
-  .catch((e) => console.log('[BOT] Bota giriş yapılırken bir hata oluştu:\n' + e))
+  .then(() => console.log('[BOT] Logged in successfully!'))
+  .catch((e) => {
+    console.log('[BOT] An error occurred while logging in!')
+    throw new Error(e)
+  })
