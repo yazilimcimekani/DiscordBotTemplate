@@ -15,7 +15,7 @@ class InteractionHandler {
           const event = await require(`../events/${file}`)
 
           if (!event) return
-          this.client.on(event.eventName, event.execute.bind(null, this.client))
+          this.client.on(event.eventName, event.execute)
           console.log(`[EVENT] ${event.name} adlı event başarıyla yüklendi!`)
         })
     } catch (e) {
