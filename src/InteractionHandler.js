@@ -1,5 +1,5 @@
 const { REST, Routes } = require('discord.js')
-const { BOT } = require('../../config.js')
+const { BOT } = require('../config.js')
 const { readdirSync } = require('fs')
 
 class InteractionHandler {
@@ -12,7 +12,7 @@ class InteractionHandler {
       readdirSync('./src/events')
         .filter((file) => file.endsWith('.js'))
         .forEach(async (file) => {
-          const event = await require(`../events/${file}`)
+          const event = await require(`./events/${file}`)
 
           if (!event) return
           this.client.on(event.eventName, event.execute)
@@ -30,7 +30,6 @@ class InteractionHandler {
   handleSelectMenus() {}
 
   handleSlashCommands() {
-    const commands = new Set()
     const slashCommands = []
     const rest = new REST({ version: '10' }).setToken(BOT.token)
 
@@ -40,8 +39,8 @@ class InteractionHandler {
         readdirSync(`./src/commands/${dir}`)
           .filter((file) => file.endsWith('.js'))
           .forEach(async (file) => {
-            const cmd = await require(`../commands/${dir}/${file}`)
-            commands.add(cmd.metadata.name, cmd.run)
+            const cmd = await require(`./commands/${dir}/${file}`)
+            this.client.commands.set(cmd.metadata.name, cmd)
             cmd.metadata.slash.setName(cmd.metadata.name).setDescription(cmd.metadata.description)
             slashCommands.push(cmd.metadata.slash.toJSON())
             if (cmd.metadata.contextMenu) {
