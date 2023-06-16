@@ -64,9 +64,7 @@ class InteractionHandler {
           .put(Routes.applicationGuildCommands(BOT.id, BOT.slashCommandType), {
             body: slashCommands
           })
-          .then(() =>
-            console.log('[/CMDS] All slash commands loaded in the guild!')
-          )
+          .then(() => console.log('[/CMDS] All slash commands loaded in the guild!'))
       }
     }, 1000)
   }
