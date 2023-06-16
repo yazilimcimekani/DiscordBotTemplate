@@ -33,6 +33,8 @@ switch (process.env.DB) {
       connectionString: process.env.MONGODB_CONNECTION_STRING
     }
     break
+  default:
+    throw new Error('Invalid database type')
 }
 
 module.exports = configuration
