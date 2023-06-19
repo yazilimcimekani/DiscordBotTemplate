@@ -57,11 +57,11 @@ Available databases are: `MySQL`,`PostgreSQL`, `MongoDB`
 
 - ### Easy to Deploy
 
-You can deploy your bot to any platform you want. This template repository uses Docker Container.
+You can deploy your bot to any platform you want with Docker.
 
 ```shell
-docker build -t myDiscordBot .
-docker run -d myDiscordBot --env-file .env
+docker build -t my-discord-bot .
+docker run -d --env-file ./.env my-discord-bot
 ```
 
 ## Getting Started
