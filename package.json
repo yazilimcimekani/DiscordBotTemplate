@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node .",
-    "dev": "@echo Starting Development Server && nodemon",
-    "prod": "@echo Starting Production Server && npm start",
+    "dev": "nodemon",
+    "prod": "npm start",
     "format:check": "prettier --check .",
     "format": "prettier --write .",
     "lint": "eslint .",

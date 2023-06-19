@@ -5,6 +5,9 @@
     "commonjs": true,
     "es2021": true
   },
+  "globals": {
+    "client": "readonly"
+  },
   "extends": "eslint:recommended",
   "overrides": [],
   "parserOptions": {
