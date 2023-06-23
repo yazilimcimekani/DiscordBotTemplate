@@ -1,0 +1,11 @@
+{
+  "@data": {
+    "language": "English",
+    "language_code": "en"
+  },
+  "cmds": {
+    "help": {
+      "footerText": "Bot Help Menu"
+    }
+  }
+}

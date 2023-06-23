@@ -2,5 +2,10 @@
   "@data": {
     "language": "Türkçe",
     "language_code": "tr"
+  },
+  "cmds": {
+    "help": {
+      "footerText": "Bot Yardım Menüsü"
+    }
   }
 }
