@@ -5,7 +5,7 @@ Stuck with something? We're highly recommend the listed resources.
 ## Discord Api
 
 - [Official Discord Developer Documentation](https://discord.com/developers/docs/intro)
-- [Discord.js Official Guide](https://discordjs.guide/)
+- [Discord.js Guide](https://discordjs.guide/)
 - [Discord.js Issues](https://github.com/discordjs/discord.js/issues)
 
 ## NodeJS
@@ -14,6 +14,8 @@ Stuck with something? We're highly recommend the listed resources.
 
 ## Docker
 
+- [Official Docker Documentation](https://docs.docker.com/)
+- [Official Docker Cli References](https://docs.docker.com/engine/reference/commandline/cli/)
 - [DigitalOcean Docker Tutorials](https://www.digitalocean.com/community/tutorials?q=%5BDocker%5D)
 
 ## Database
