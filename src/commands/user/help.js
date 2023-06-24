@@ -1,11 +1,16 @@
 const { EmbedBuilder } = require('discord.js')
 const metadata = require('../meta/help.meta')
+const i18n = require('../../i18n')
 
 module.exports = {
   metadata: metadata,
 
   async run(interaction) {
-    const helpEmbed = new EmbedBuilder().setColor('DarkGold').setFooter({ text: 'Bot Help Menu' })
+    let strings = i18n(interaction.guildLocale).cmds.help
+
+    const helpEmbed = new EmbedBuilder()
+      .setColor('DarkGold')
+      .setFooter({ text: strings.footerText })
     client.commands.forEach((cmd) => {
       helpEmbed.addFields({ name: cmd.metadata.name, value: cmd.metadata.description })
     })

@@ -2,5 +2,14 @@
   "@data": {
     "language": "Türkçe",
     "language_code": "tr"
+  },
+  "cmds": {
+    "help": {
+      "footerText": "Bot Yardım Menüsü"
+    },
+    "invite": {
+      "inviteText": "Beni Sunucuna ekle!",
+      "inviteLabel": "Davet Bağlantısı"
+    }
   }
 }

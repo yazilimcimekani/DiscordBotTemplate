@@ -1,0 +1,15 @@
+{
+  "@data": {
+    "language": "English",
+    "language_code": "en"
+  },
+  "cmds": {
+    "help": {
+      "footerText": "Bot Help Menu"
+    },
+    "invite": {
+      "inviteText": "Add Me to Your server!",
+      "inviteLabel": "Invite Link"
+    }
+  }
+}
