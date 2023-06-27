@@ -115,7 +115,7 @@ pnpm dev
 And that's the result:
 
 ```md
-[BOT] Bot is ready!'
+[BOT] Bot is ready!
 ```
 
 Happy coding!
