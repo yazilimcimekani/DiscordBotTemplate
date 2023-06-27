@@ -53,7 +53,7 @@ Interested? Please see `./src/commands/i18n/` directory.
 
 You can use any database you want. This template repository uses [Sequelize ORM](https://sequelize.org)
 
-Available databases are: `MySQL`,`PostgreSQL`, `MongoDB`
+Available databases are: `MySQL`,`PostgreSQL`, `MsSQL`
 
 - ### Easy to Deploy
 
