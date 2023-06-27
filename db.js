@@ -3,7 +3,7 @@ const { DB } = require('./config')
 if (!DB) return
 
 function connect(dbName) {
-  if (dbName == 'mysql' || dbName == "mssql") {
+  if (dbName == 'mysql' || dbName == 'mssql') {
     return connectWithParams(DB.host, DB.username, DB.password, DB.database, DB._type)
   } else if (dbName === 'postgres') {
     return connectWithString(DB.connectionString, DB._type)
