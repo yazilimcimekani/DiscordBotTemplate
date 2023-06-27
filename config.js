@@ -27,10 +27,13 @@ switch (process.env.DB) {
       connectionString: process.env.POSTGRES_CONNECTION_STRING
     }
     break
-  case 'mongodb':
+  case 'mssql':
     configuration.DB = {
       _type: process.env.DB,
-      connectionString: process.env.MONGODB_CONNECTION_STRING
+      host: process.env.MSSQL_HOST,
+      username: process.env.MSSQL_USER,
+      password: process.env.MSSQL_PASSWORD,
+      database: process.env.MSSQL_DATABASE
     }
     break
   default:
