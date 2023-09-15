@@ -894,7 +894,7 @@ simple-update-notifier@^1.0.7:
   resolved "https://registry.yarnpkg.com/simple-update-notifier/-/simple-update-notifier-1.1.0.tgz#67694c121de354af592b347cdba798463ed49c82"
   integrity sha512-VpsrsJSUcJEseSbMHkrsrAVSdvVS5I96Qo1QAQ4FxQ9wXFcB+pjj7FB7/us9+GcgfW4ziHtYMc1J0PLczb55mg==
   dependencies:
-    semver "~7.0.0"
+    semver "^7.5.2"
 
 streamsearch@^1.1.0:
   version "1.1.0"
