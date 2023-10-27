@@ -15,8 +15,8 @@
   "keywords": [],
   "author": "Yazılımcı Mekanı Dev Team",
   "devDependencies": {
-    "eslint": "^8.42.0",
-    "nodemon": "^2.0.22",
+    "eslint": "^8.52.0",
+    "nodemon": "^3.0.1",
     "prettier": "2.8.3"
   },
   "license": "MIT",
