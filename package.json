@@ -12,17 +12,25 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
-  "keywords": [],
+  "keywords": [
+    "discord",
+    "discordjs",
+    "discord.js",
+    "discord-js-bot",
+    "bot-template",
+    "discord-bot-boilerplate",
+    "discord-bot-template"
+  ],
   "author": "Yazılımcı Mekanı Dev Team",
   "devDependencies": {
-    "eslint": "^8.42.0",
-    "nodemon": "^2.0.22",
+    "eslint": "^8.52.0",
+    "nodemon": "^3.0.1",
     "prettier": "2.8.3"
   },
   "license": "MIT",
   "dependencies": {
     "discord.js": "^14.13.0",
     "dotenv-safe": "^8.2.0",
-    "sequelize": "^6.32.1"
+    "sequelize": "^6.33.0"
   }
 }
