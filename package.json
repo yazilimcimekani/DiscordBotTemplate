@@ -23,6 +23,6 @@
   "dependencies": {
     "discord.js": "^14.13.0",
     "dotenv-safe": "^8.2.0",
-    "sequelize": "^6.32.1"
+    "sequelize": "^6.33.0"
   }
 }
