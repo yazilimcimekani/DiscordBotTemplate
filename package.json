@@ -6,11 +6,14 @@
   "scripts": {
     "start": "node .",
     "dev": "nodemon",
-    "prod": "npm start",
+    "prod": "yarn start",
     "format:check": "prettier --check .",
     "format": "prettier --write .",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "db-install:mysql": "yarn add mysql2",
+    "db-install:postgres": "yarn add pg",
+    "db-install:mssql": "yarn add tedious"
   },
   "keywords": [
     "discord",
