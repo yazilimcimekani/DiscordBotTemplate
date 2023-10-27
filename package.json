@@ -12,7 +12,15 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
-  "keywords": [],
+  "keywords": [
+    "discord",
+    "discordjs",
+    "discord.js",
+    "discord-js-bot",
+    "bot-template",
+    "discord-bot-boilerplate",
+    "discord-bot-template"
+  ],
   "author": "Yazılımcı Mekanı Dev Team",
   "devDependencies": {
     "eslint": "^8.52.0",
