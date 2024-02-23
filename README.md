@@ -84,14 +84,10 @@ First, you need to have [Node.js](https://nodejs.org/en) installed on your compu
 
 Then, you need to install the dependencies of the project.
 
-We are using `yarn` package manager but you can use `npm` or `pnpm` too.
+We are using `yarn` package manager.
 
 ```shell
-npm install
-# or
-yarn install
-# or
-pnpm install
+yarn install --frozen-lockfile
 ```
 
 Then, you need to create a `.env` file in the root directory of the project.
@@ -105,11 +101,7 @@ Example .env file: `./.env.example`
 Starting the bot with hot reload by [Nodemon](https://nodemon.io):
 
 ```shell
-npm run dev
-# or
 yarn dev
-# or
-pnpm dev
 ```
 
 And that's the result:
