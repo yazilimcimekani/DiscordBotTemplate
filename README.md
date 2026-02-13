@@ -6,19 +6,15 @@ by [Yazılımcı Mekanı](https://discord.gg/yazilimcimekani) for everyone
 
 ## Table of Contents
 
-- [Key Features](#key-features)
-    - [Latest Discord Api Support](#latest-discord-api-support)
-    - [Multi Purpose](#multi-purpose)
-    - [Easy to Use](#easy-to-use)
-    - [Multi Language Support](#multi-language-support)
-    - [Easy Database Migration](#easy-database-migration)
-    - [Easy to Deploy](#easy-to-deploy)
-- [Getting Started](#getting-started)
-- [Installation](#installation)
+- [Discord Bot Template](#discord-bot-template)
+  - [Table of Contents](#table-of-contents)
+  - [Key Features](#key-features)
+  - [Getting Started](#getting-started)
+  - [Installation](#installation)
     - [Dependencies](#dependencies)
     - [Starting the bot](#starting-the-bot)
-- [Contributing](#contributing)
-- [Support](#support)
+  - [Contributing](#contributing)
+  - [Support](#support)
 
 ## Key Features
 
@@ -84,10 +80,10 @@ First, you need to have [Node.js](https://nodejs.org/en) installed on your compu
 
 Then, you need to install the dependencies of the project.
 
-We are using `yarn` package manager.
+We are using `pnpm` as our package manager.
 
 ```shell
-yarn install --frozen-lockfile
+pnpm install
 ```
 
 Then, you need to create a `.env` file in the root directory of the project.
@@ -101,7 +97,7 @@ Example .env file: `./.env.example`
 Starting the bot with hot reload by [Nodemon](https://nodemon.io):
 
 ```shell
-yarn dev
+pnpm dev
 ```
 
 And that's the result:
