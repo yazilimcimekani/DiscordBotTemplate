@@ -2,6 +2,7 @@
 node_modules
 build
 docs
+.github/
 
 ## file extensions to ignore
 *.png
@@ -15,6 +16,8 @@ docs
 
 ## files to ignore
 package.json
+pnpm-lock.yaml
+pnpm-workspace.yaml
 yarn.lock
 .gitignore
 .gitmodules
